@@ -10,7 +10,18 @@ class Home extends StatelessWidget {
       backgroundColor: tdBGColor,
       appBar: _buildAppbar(),
       body: Container(
-        child: Text('This is a home screen'),
+        padding: EdgeInsets.symmetric(horizontal: 15),
+        child: Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: TextField(),
+            )
+          ],
+        ),
       ),
     );
   }
