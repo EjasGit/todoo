@@ -10,9 +10,25 @@ class Home extends StatelessWidget {
       backgroundColor: tdBGColor,
       appBar: _buildAppbar(),
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
         child: Column(
-          children: [searchBox()],
+          children: [
+            searchBox(),
+            Expanded(
+              child: ListView(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(top: 50, bottom: 20),
+                    child: const Text(
+                      'All to doos',
+                      style:
+                          TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );
